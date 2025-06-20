@@ -17,3 +17,31 @@ def main():
 
 if __name__ == "__main__":
     main()
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b == 0:
+        return "No se puede dividir por cero."
+    return a / b
+
+def main():
+    print("Elige una opción:")
+    print("1. Multiplicar")
+    print("2. Dividir")
+    opcion = input("Opción (1/2): ")
+
+    a = float(input("Ingresa el primer número: "))
+    b = float(input("Ingresa el segundo número: "))
+
+    if opcion == '1':
+        resultado = multiplicar(a, b)
+        print(f"El resultado de multiplicar es: {resultado}")
+    elif opcion == '2':
+        resultado = dividir(a, b)
+        print(f"El resultado de dividir es: {resultado}")
+    else:
+        print("Opción inválida.")
+
+if __name__ == "__main__":
+    main()
